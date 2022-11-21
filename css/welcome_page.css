@@ -1,0 +1,299 @@
+@import url(https://use.typekit.net/tzy4aya.css);
+
+:root {
+  --orange: #ea684c;
+  --yellow: #f8b236;
+  --grey: #40454b;
+  --white: #fff;
+  font-size: 16px;
+
+  font-family: montserrat, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+}
+
+#navigationbar {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 6em;
+  z-index: 5;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  border: 5px solid var(--orange);
+
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+#navigationbar a {
+  font-weight: bold;
+}
+
+#navigationbar_mobile {
+  display: none;
+}
+
+.rightside {
+  position: relative;
+}
+
+.logo img {
+  padding: 0.4em;
+  height: 65px;
+  width: auto;
+}
+
+.leftside ul,
+.rightside ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  font-size: 1em;
+}
+
+.leftside li,
+.rightside li {
+  padding: 0.6em;
+}
+
+.leftside a,
+.rightside a {
+  text-decoration: none;
+  padding: 0.2em;
+  color: black;
+}
+
+#vertical_line {
+  border: 0.04em solid var(--orange);
+  background-color: var(--orange);
+  height: 2em;
+  width: 2px;
+}
+
+.langswitch {
+  font-weight: 800;
+}
+
+.rightside p {
+  margin: 0;
+}
+
+/*content*/
+.welcomepage {
+  display: block;
+}
+
+.yellowdot {
+  z-index: 0;
+  height: 31.25em;
+  width: 31.25em;
+
+  position: absolute;
+  left: 18%;
+  top: 7.5em;
+  background-color: #faca76;
+  border-radius: 50%;
+}
+
+.reddot {
+  z-index: 1;
+  height: 25em;
+  width: 25em;
+
+  top: -100px;
+  position: absolute;
+
+  background-color: var(--orange);
+  border-radius: 50%;
+}
+
+.yellowtriangle {
+  position: relative;
+  z-index: -4;
+  top: -5em;
+  left: calc(100% - 75vw);
+}
+
+.redtriangle {
+  position: absolute;
+  z-index: 1;
+  top: 60%;
+  left: 40%;
+}
+
+.welcome_text {
+  width: max-content;
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  left: 7rem;
+  top: 10rem;
+}
+
+.welcome_text p {
+  margin: 0;
+  color: var(--grey);
+  font-family: montserrat, sans-serif;
+  font-weight: 600;
+  font-size: 80px;
+}
+
+/*dotted image of Grundfos*/
+.grundfos_dotted {
+  z-index: -3;
+  height: 85%;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+
+/* tablet size */
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .logo img {
+    padding: 0.5vh;
+    height: 60px;
+    width: auto;
+  }
+
+  .leftside li,
+  .rightside li {
+    padding: 0.5vw;
+    font-size: 0.9em;
+  }
+
+  .yellowtriangle {
+    display: none;
+    height: 50vh;
+    width: 100vw;
+  }
+}
+
+/* mobile size */
+@media only screen and (max-width: 766px) {
+  body {
+    overflow-x: hidden;
+  }
+  #navigationbar {
+    width: 100%;
+    height: 6rem;
+    justify-content: center;
+  }
+
+  .leftside,
+  .rightside,
+  .yellowtriangle,
+  .redtriangle {
+    display: none;
+  }
+
+  #navigationbar_mobile {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile_button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .burger_menu {
+    padding: 1em;
+  }
+
+  .logo h3 {
+    font-size: 1.45em;
+  }
+
+  .langswitch_mobile {
+    padding: 1em;
+  }
+
+  .welcomepage {
+    height: 100vh;
+    background-image: url(/Welcome\ Page/grundfos_dotted_photo_new_ver.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .grundfos_dotted {
+    display: none;
+  }
+
+  .reddot {
+    top: 3em;
+    left: -1em;
+    height: 10em;
+    width: 10em;
+  }
+
+  .reddot_mobile_middle {
+    display: block;
+    mix-blend-mode: darken;
+    z-index: 0;
+    height: 15em;
+    width: 15em;
+
+    position: absolute;
+    top: 5em;
+    right: -3.6em;
+
+    background-color: var(--orange);
+    border-radius: 50%;
+  }
+
+  .reddot_mobile_bottom {
+    display: block;
+    mix-blend-mode: darken;
+    z-index: 1;
+    height: 30em;
+    width: 30em;
+
+    position: absolute;
+    top: 32em;
+    right: calc(100% - 20em);
+
+    background-color: var(--orange);
+    border-radius: 50%;
+  }
+
+  .yellowdot {
+    background-color: #faca76;
+    position: relative;
+    justify-content: center;
+    z-index: 1;
+    left: 0;
+    top: 7rem;
+    margin: auto;
+    display: block;
+    height: 23rem;
+    width: 23rem;
+  }
+
+  .welcome_text {
+    position: relative;
+    top: 6em;
+    font-size: 1rem;
+    align-items: center;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  .welcome_text p {
+    font-size: 3em;
+  }
+}

@@ -1,0 +1,173 @@
+@import url(https://use.typekit.net/tzy4aya.css);
+
+:root {
+  --orange: #ea684c;
+  --yellow: #f8b236;
+  --grey: #40454b;
+  --white: #fff;
+  font-size: 16px;
+
+  font-family: montserrat, sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  overflow: hidden;
+}
+
+#navigationbar {
+  box-sizing: border-box;
+  width: 100vw;
+  height: 6em;
+  z-index: 5;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  border: 5px solid var(--orange);
+
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navigationbar_mobile {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.burger_menu {
+  padding: 1em;
+}
+
+.langswitch_mobile {
+  padding: 1em;
+}
+
+.logo img {
+  padding: 0.4em;
+  height: 65px;
+  width: auto;
+}
+
+#vertical_line {
+  border: 0.04em solid var(--orange);
+  background-color: var(--orange);
+  height: 2em;
+  width: 2px;
+}
+
+/* background */
+.yellowdot {
+  z-index: 0;
+  height: 23rem;
+  width: 23rem;
+
+  position: absolute;
+  left: 18%;
+  top: 7.5rem;
+  background-color: #faca76;
+  border-radius: 50%;
+}
+
+.reddot1 {
+  height: 10em;
+  width: 10em;
+
+  top: 3em;
+  left: -1em;
+  position: absolute;
+
+  background-color: var(--orange);
+  border-radius: 50%;
+}
+
+.reddot2 {
+  display: block;
+  mix-blend-mode: darken;
+  height: 15em;
+  width: 15em;
+
+  position: absolute;
+  top: 10em;
+  right: -3.6em;
+
+  background-color: #faca76;
+  border-radius: 50%;
+}
+
+.reddot3 {
+  display: block;
+  mix-blend-mode: darken;
+  height: 30em;
+  width: 30em;
+
+  position: absolute;
+  top: 32em;
+  right: calc(100% - 20em);
+
+  background-color: var(--orange);
+  border-radius: 50%;
+}
+
+/*dotted image of Grundfos*/
+.grundfos_dotted {
+  z-index: -3;
+  height: 150%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* content */
+.menu_container {
+  position: relative;
+  top: 6.25em;
+}
+
+.menu_list {
+  list-style-type: none;
+  position: relative;
+  top: 2%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 80vw;
+  margin: auto;
+  padding: 1em 0;
+  background: rgba(255, 255, 255, 0.829);
+  border: 1px solid white;
+  border-radius: 30px;
+}
+
+.menu_list hr {
+  border-top: 5px solid #ea684c;
+  border-radius: 2px;
+  width: 40vw;
+}
+
+.menu_list li {
+  padding: 0.6em 0;
+}
+
+.menu_list a {
+  font-size: 1em;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 0.2em;
+  color: black;
+}

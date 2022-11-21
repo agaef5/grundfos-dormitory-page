@@ -1,0 +1,104 @@
+/* Basic */
+@import url(https://use.typekit.net/tzy4aya.css);
+
+:root{
+    --orange: #EA684C;
+    --yellow: #F8B236;
+    --grey: #40454B;
+    --white: #fff;
+    --translucent: rgba(255, 255, 255, 0.63);
+    font-family: montserrat,sans-serif;
+}
+
+body{
+    background-color: var(--white);
+    margin: 0px;
+    overflow: hidden;
+    top: 0px;
+    bottom: 0px;
+}
+/* Basic END */
+
+.plain-card{
+    color: var(--grey);
+    display: inline-block;
+    background-color: var(--translucent);
+    border-radius: 50px;
+    width: 700px;
+    height: 400px;
+    padding: 0px 30px 20px 30px;
+    position: absolute;
+    top: 290px;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Box */
+.box{
+    margin-top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: auto;
+}
+
+h1{
+    text-align: center;
+    font-size: 3em;
+    font-weight: bold;
+    margin: 10px 10px 0px 10px;
+}
+
+img {
+    max-width: 110%;
+    max-height: 110%;
+}
+
+.homebtn {
+    position: absolute;
+    margin-top: auto;
+    height: 70px;
+    width: 80x;
+    margin-top: 20px;
+    margin-left: 310px;
+    cursor: pointer;
+}
+
+/*
+
+    BG Elements
+
+*/
+
+.yellowdot{
+    z-index: -1;
+    height: 600px;
+    width: 600px;
+
+    position: absolute;
+    left: 700px;
+    top: 250px;
+    background-color: var(--yellow);
+    opacity: 0.68;
+    border-radius: 50%;
+}
+
+.reddot{
+    z-index: -1;
+    height: 500px;
+    width: 500px;
+
+    top: -60px;
+    left: -90px;
+    position: absolute;
+    
+    background-color: var(--orange);
+    border-radius: 50%;
+}
+
+/*dotted image of Grundfos*/
+.grundfos_dotted{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}

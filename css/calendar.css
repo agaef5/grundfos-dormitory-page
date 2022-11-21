@@ -1,0 +1,703 @@
+/* Meyer reset
+@import url("meyerReset.css");*/
+
+:root {
+  --orange: #ea684c;
+  --yellow: #f8b236;
+  --grey: #40454b;
+  --white: #fff;
+  font-family: Montserrat, sans-serif;
+}
+
+/*--------------- Navigation Bar ---------------*/
+body {
+  margin: 0px;
+  overflow-x: hidden;
+  top: 0px;
+  bottom: 0px;
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 10px;
+  background-color: #262626;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--orange);
+  border-radius: 10px;
+}
+
+#navigationbar {
+  box-sizing: border-box;
+  width: 99.5vw;
+  height: 6em;
+  z-index: 5;
+  margin: 0;
+  padding: 0;
+  background-color: var(--white);
+  border: 5px solid var(--orange);
+
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+}
+#navigationbar a {
+  font-weight: bold;
+}
+
+#navigationbar_mobile {
+  display: none;
+}
+
+.rightside {
+  position: relative;
+}
+
+.logo img {
+  padding: 0.4em;
+  height: 65px;
+  width: auto;
+}
+
+.leftside ul,
+.rightside ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  font-size: 1em;
+}
+
+.leftside li,
+.rightside li {
+  padding: 0.6em;
+}
+
+.leftside a,
+.rightside a {
+  text-decoration: none;
+  padding: 0.2em;
+  color: black;
+}
+
+#vertical_line {
+  border: 0.04em solid var(--orange);
+  background-color: var(--orange);
+  height: 2em;
+  width: 2px;
+}
+
+.langswitch {
+  font-weight: 800;
+}
+
+.rightside p {
+  margin: 0;
+}
+
+/*--------------- 2 row Column ---------------*/
+.column {
+  float: left;
+  width: 50%;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*--------------- Flexbox ---------------*/
+.flex-container {
+  display: flex;
+}
+
+/*--------------- Calendar ---------------*/
+.calendar_container {
+  scale: 80%;
+  width: 100%;
+  height: 100%;
+  color: #eee;
+  display: flex;
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.calendar {
+  width: 45rem;
+  height: 45rem;
+  background-color: #262626;
+  /*box-shadow: 0 .5rem 3rem rgba(0, 0, 0, .4);*/
+  border-radius: 20px;
+}
+
+.month {
+  width: 91.16%;
+  height: 10rem;
+  background-color: #ea684c;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+  text-align: center;
+  /*text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.5);*/
+  border-radius: 20px;
+}
+
+.month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.month h1 {
+  font-size: 3rem;
+  font-weight: 400;
+  letter-spacing: 0.2rem;
+  margin-bottom: 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.month p {
+  font-size: 1.6rem;
+}
+
+.weekdays {
+  width: 100%;
+  height: 5rem;
+  padding: 0 0.4rem;
+  display: flex;
+  align-items: center;
+}
+
+.weekdays div {
+  font-size: 1.5rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  width: calc(44.2rem / 7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-shadow: 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.days {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.2rem;
+  cursor: pointer;
+}
+
+.days div {
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: calc(40.2rem / 7);
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*text-shadow: 0 .3rem .5rem rgba(0, 0, 0, 0.5);*/
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.days div:hover:not(.today) {
+  background-color: #262626;
+  border: 0.2rem solid rgb(142, 141, 141);
+  cursor: pointer;
+}
+
+.prev-date,
+.next-date {
+  opacity: 0.5;
+}
+
+.today {
+  background-color: #ea684c;
+  border-radius: 30px;
+}
+
+/*--------------- List of Events ---------------*/
+.in_program {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  text-align: center;
+  font-size: 34px;
+  margin-top: 100px;
+}
+
+.line {
+  border-bottom: 4px solid #ea684c;
+  display: block;
+  margin-top: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+/* Collapse List */
+.events_container {
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 70%;
+  height: 455px;
+  padding-top: 10px;
+  margin: auto;
+}
+
+.events_container::-webkit-scrollbar-track {
+  margin-top: 10px;
+  background-color: #262626;
+  border-radius: 10px;
+}
+
+.events_container::-webkit-scrollbar {
+  border-radius: 10px;
+}
+
+.events_container::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: var(--orange);
+}
+
+.container_events {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  background-color: var(--white);
+  border: 5px solid var(--orange);
+  border-radius: 15px;
+  padding: 0 2%;
+  margin: 0.5%;
+  margin-top: 5px;
+}
+
+.title {
+  cursor: pointer;
+  width: 100%;
+  background-color: var(--white);
+  border: none;
+  font-family: montserrat, sans-serif;
+  font-weight: 1000;
+  font-size: 1rem;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 1%;
+}
+
+.content {
+  padding: 1% 2%;
+  text-align: justify;
+  box-sizing: border-box;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-in-out;
+  margin-top: 0;
+  padding: 0;
+}
+
+.content p {
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+.active_content {
+  padding: 1% 2% 3%;
+}
+
+/*--------------- Filter ---------------*/
+.dropbtn {
+  background-color: #ea684c;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  margin-left: 550px;
+  margin-top: 100px;
+  position: absolute;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover,
+.dropbtn:focus {
+  background-color: #ea684c;
+}
+
+/* The search field */
+#myInput {
+  box-sizing: border-box;
+  background-position: 14px 12px;
+  background-repeat: no-repeat;
+  font-size: 16px;
+  padding: 14px 20px 12px 45px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+}
+
+/* The search field when it gets focus/clicked on */
+#myInput:focus {
+  outline: 3px solid #ddd;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: absolute;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f6f6f6;
+  min-width: 230px;
+  border: 1px solid #ddd;
+  z-index: 1;
+  margin-left: 360px;
+  margin-top: 150px;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 15px;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+  display: block;
+}
+
+.info-text.h2 {
+  background-color: #40454b;
+}
+
+/*--------------- More Information ---------------*/
+details > summary {
+  padding: 4px;
+  width: 75px;
+  cursor: pointer;
+  size: 1px;
+  position: absolute;
+  margin-top: 125px;
+  margin-left: 670px;
+}
+
+details > summary > .moreinfo {
+  padding: 4px;
+  width: 200px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  margin-left: 8px;
+  margin-top: -20px;
+}
+
+details > p {
+  z-index: 1;
+  background-color: white;
+  border: 2px solid #222227;
+  border-color: #ea684c;
+  border-radius: 10px;
+  padding: 6px;
+  font-size: 16px;
+  position: absolute;
+  margin-top: 190px;
+  margin-left: 460px;
+  text-align: center;
+}
+
+/*--------------- Home Button ---------------*/
+footer {
+  width: 100vw;
+  height: 11vh;
+  /* background-color: var(--white); */
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.home_button {
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+}
+
+.mobile_button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+/*--------------- Background ---------------*/
+
+/*--------------- Responsive ---------------*/
+@media only screen and (max-width: 766px) {
+  /*Phone*/
+  #navigationbar {
+    width: 100%;
+    height: 6rem;
+    justify-content: center;
+  }
+
+  .leftside,
+  .rightside,
+  .yellowtriangle,
+  .redtriangle {
+    display: none;
+  }
+
+  #navigationbar_mobile {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .burger_menu {
+    padding: 1em;
+  }
+
+  .logo h3 {
+    font-size: 1.45em;
+  }
+
+  .langswitch_mobile {
+    padding: 1em;
+  }
+
+  footer {
+    display: none;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  details > summary {
+    padding: 4px;
+    width: 75px;
+    cursor: pointer;
+    size: 1px;
+    position: absolute;
+    margin-top: 700px;
+    margin-left: 590px;
+  }
+
+  details > summary > .moreinfo {
+    padding: 4px;
+    width: 200px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-left: 8px;
+    margin-top: -20px;
+  }
+
+  details > p {
+    z-index: 1;
+    background-color: white;
+    border: 2px solid #222227;
+    border-color: #ea684c;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 16px;
+    position: absolute;
+    margin-top: 700px;
+    margin-left: 50px;
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .homebtn {
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 335px;
+    height: 50px;
+    width: 60px;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  /*Tablet*/
+  .calendar_container {
+    margin-left: 90px;
+  }
+
+  .column {
+    width: 100%;
+  }
+
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* navigation bar */
+  .logo img {
+    padding: 0.5vh;
+    height: 60px;
+    width: auto;
+  }
+
+  .leftside li,
+  .rightside li {
+    padding: 0.5vw;
+    font-size: 0.9em;
+  }
+
+  /* footer */
+  footer {
+    display: none;
+  }
+
+  details > summary {
+    padding: 4px;
+    width: 75px;
+    cursor: pointer;
+    size: 1px;
+    position: absolute;
+    margin-top: 690px;
+    margin-left: 770px;
+  }
+
+  details > summary > .moreinfo {
+    padding: 4px;
+    width: 200px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-left: 8px;
+    margin-top: -20px;
+  }
+
+  details > p {
+    z-index: 1;
+    background-color: white;
+    border: 2px solid #222227;
+    border-color: #ea684c;
+    border-radius: 10px;
+    padding: 6px;
+    font-size: 16px;
+    position: absolute;
+    margin-top: 700px;
+    margin-left: 212px;
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  /* .homebtn {
+        position: absolute;
+        margin-top: 60px;
+        margin-left: 460px;
+        height: 50px;
+        width: 60px;
+        cursor: pointer;
+    } */
+
+  .dropbtn {
+    background-color: #ea684c;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-left: 650px;
+    margin-top: 95px;
+    position: absolute;
+  }
+
+  .dropbtn:hover,
+  .dropbtn:focus {
+    background-color: #ea684c;
+  }
+
+  #myInput {
+    box-sizing: border-box;
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #myInput:focus {
+    outline: 3px solid #ddd;
+  }
+
+  .dropdown {
+    position: absolute;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    border: 1px solid #ddd;
+    z-index: 1;
+    margin-left: 460px;
+    margin-top: 146px;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #f1f1f1;
+  }
+
+  .show {
+    display: block;
+  }
+
+  .info-text.h2 {
+    background-color: #40454b;
+  }
+}

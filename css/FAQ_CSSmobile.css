@@ -1,0 +1,185 @@
+@import url("meyerReset.css");
+
+/* Basic */
+@import url(https://use.typekit.net/tzy4aya.css);
+
+/*
+        Mobile version
+*/
+
+@media only screen and (max-width: 766px) {
+  :root {
+    --orange: #ea684c;
+    --yellow: #f8b236;
+    --grey: #40454b;
+    --white: #ffff;
+    font-family: Montserrat, sans-serif;
+    color: var(--grey);
+    font-size: 16px;
+  }
+
+  ::selection {
+    color: var(--white);
+    background: var(--orange);
+  }
+
+  /* Navigation bar */
+  body {
+    overflow-x: hidden;
+  }
+
+  #navigationbar {
+    width: 100%;
+    height: 6rem;
+    justify-content: center;
+  }
+
+  .leftside,
+  .rightside,
+  .yellowtriangle,
+  .redtriangle {
+    display: none;
+  }
+
+  #navigationbar_mobile {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .mobile_button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .burger_menu {
+    padding: 1em;
+  }
+
+  .logo h3 {
+    font-size: 1.45em;
+  }
+
+  .langswitch_mobile {
+    padding: 1em;
+  }
+
+  a {
+    color: var(--orange);
+    font-weight: bold;
+  }
+
+  /* Scrollbar */
+  #scrollBox {
+    overflow: scroll;
+  }
+  ::-webkit-scrollbar {
+    width: 20px;
+    background-color: var(--grey);
+  }
+  ::-webkit-scrollbar-track {
+    border-radius: 10px;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--orange);
+    border-radius: 5px;
+  }
+
+  /* Basic END */
+
+  /* Title format*/
+  .title {
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .subtitle {
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  /* List format*/
+  .questions-box {
+    width: 100%;
+    height: 400px;
+  }
+
+  .questions-list {
+    list-style-type: none;
+    text-align: center;
+  }
+  li {
+    line-height: 220%;
+    font-size: 2em;
+  }
+
+  #scrollBox {
+    width: 100%;
+    height: 350px;
+
+    right: 0;
+
+    text-align: center;
+    display: block;
+    overflow: scroll;
+  }
+
+  /* Form format */
+  /* invisible iframe of form */
+  .question-send {
+    display: none;
+  }
+
+  .btn-hold {
+    width: 100%;
+    display: block;
+  }
+
+  .btn-question-mobile {
+    color: var(--white);
+    background-color: var(--orange);
+
+    font-size: 2em;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+
+    width: 250px;
+    height: 20px;
+
+    border-radius: 50px;
+    border-width: 0px;
+    padding: 20px 30px 35px 30px;
+  }
+  .btn-question-mobile a {
+    color: var(--white);
+    text-decoration: none;
+  }
+}
+
+/*
+        Tablet version
+*/
+
+@media only screen and (min-width: 767px) and (max-width: 1023px) {
+  .logo img {
+    padding: 0.5vh;
+    height: 60px;
+    width: auto;
+  }
+
+  .leftside li,
+  .rightside li {
+    padding: 0.5vw;
+    font-size: 0.9em;
+  }
+
+  .yellowtriangle {
+    display: none;
+    height: 50vh;
+    width: 100vw;
+  }
+}
